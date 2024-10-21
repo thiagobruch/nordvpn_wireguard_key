@@ -1,4 +1,4 @@
-# How to get Wireguard Private Key from a NordVPN Connection
+# How to get WireGuard Private Key from a NordVPN Connection
 
 <B>1 - </b>In your docker server, run the following command:
 ```
