@@ -2,7 +2,7 @@
 
 <B>1 - </b>In your docker server, run the following command:
 ```
-docker run -it --name bruch-nord --cap-add=NET_ADMIN --sysctl net.ipv6.conf.all.disable_ipv6=0 thiagobruch/nordvpn_wg_key
+docker run -it --name nordvpn_wg_key --cap-add=NET_ADMIN --sysctl net.ipv6.conf.all.disable_ipv6=0 thiagobruch/nordvpn_wg_key
 ```
 <B>2 - </B>The command above will download the image and start the container. Once the container is running, run the command below:
 ```
