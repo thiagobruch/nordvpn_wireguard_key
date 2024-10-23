@@ -39,9 +39,9 @@ PrivateKey = 0skE58AkMhLQ2vctnzB4VKykcVonVOQLbt1Swzyvbif=
 
 # Gluetun Container for NordVPN with WireGuard
 
-<B>2.1 - </B>Create a directory (i.e. /docker/gluetun)
-<B>2.2 - </B>Create a file named docker-compose.yml and edit using your favorite editor (i.e. nano, vi)
-<B>2.3 - </B>Use the code below (replace the WIREGUARD_PRIVATE_KEY with the key extracted in the item 1.7):
+<B>2.1 - </B>Create a directory (i.e. /docker/gluetun)<BR>
+<B>2.2 - </B>Create a file named docker-compose.yml and edit using your favorite editor (i.e. nano, vi)<BR>
+<B>2.3 - </B>Use the code below (replace the WIREGUARD_PRIVATE_KEY with the key extracted in the item 1.7):<BR>
 ```
 version: "3"
 services:
