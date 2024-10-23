@@ -1,4 +1,4 @@
-# How to get WireGuard Private Key from a NordVPN Connection
+# How to get WireGuard Private Key from a NordVPN Connection in order to use with Gluetun Container
 
 <B>1 - </b>In your docker server, run the following command:
 ```
@@ -36,3 +36,34 @@ An example of the response would be:
 PrivateKey = 0skE58AkMhLQ2vctnzB4VKykcVonVOQLbt1Swzyvbif=
 
 <B>8 - </B>Now you can use the PrivateKey to connect directly using WireGuard
+
+# Gluetun Container for NordVPN with WireGuard
+
+1 - Create a directory (i.e. /docker/gluetun)
+2 - Create a file named docker-compose.yml and edit using your favorite editor (i.e. nano, vi)
+3 - Use the code below:
+```
+version: "3"
+services:
+  gluetun:
+    image: qmcgaw/gluetun
+    container_name: gluetun_nordvpn
+    cap_add:
+      - NET_ADMIN
+    ports: #make sure to include this port to be used as your proxy port
+      - 8890:8888
+    environment:
+      - VPN_SERVICE_PROVIDER=nordvpn
+      - VPN_TYPE=wireguard
+      - WIREGUARD_PRIVATE_KEY=bER4QZNdOvQzxx9nuQ01UCz1wdx6DzUcAXZu93n5K0Y=
+      - SERVER_COUNTRIES=Canada
+      - HTTPPROXY=on
+      - HTTPPROXY_LISTENING_ADDRESS=:8888
+    volumes:
+      - /docker/gluetun/data:/gluetun
+    restart: unless-stopped
+```
+4 - Save and run the container using the command below:
+```docker compose up -d
+```
+
