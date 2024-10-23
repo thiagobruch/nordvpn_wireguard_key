@@ -39,9 +39,9 @@ PrivateKey = 0skE58AkMhLQ2vctnzB4VKykcVonVOQLbt1Swzyvbif=
 
 # Gluetun Container for NordVPN with WireGuard
 
-2.1 - Create a directory (i.e. /docker/gluetun)
-2.2 - Create a file named docker-compose.yml and edit using your favorite editor (i.e. nano, vi)
-2.3 - Use the code below (replace the WIREGUARD_PRIVATE_KEY with the key extracted in the item 1.7):
+<B>2.1 - </B>Create a directory (i.e. /docker/gluetun)
+<B>2.2 - </B>Create a file named docker-compose.yml and edit using your favorite editor (i.e. nano, vi)
+<B>2.3 - </B>Use the code below (replace the WIREGUARD_PRIVATE_KEY with the key extracted in the item 1.7):
 ```
 version: "3"
 services:
@@ -63,9 +63,9 @@ services:
       - /docker/gluetun/data:/gluetun
     restart: unless-stopped
 ```
-2.4 - Save and run the container using the command below:
+<B>2.4 - </B>Save and run the container using the command below:
 ```
 docker compose up -d
 ```
-2.5 - Using your browser, configure the proxy to use the Coker Host IP Address and the Port defined above (i.e. 8888)
+<B>2.5 - </B>Using your browser, configure the proxy to use the Coker Host IP Address and the Port defined above (i.e. 8888)
 
