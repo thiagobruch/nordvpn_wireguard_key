@@ -51,7 +51,7 @@ services:
     cap_add:
       - NET_ADMIN
     ports: #make sure to include this port to be used as your proxy port
-      - 8890:8888
+      - 8888:8888
     environment:
       - VPN_SERVICE_PROVIDER=nordvpn
       - VPN_TYPE=wireguard
@@ -64,6 +64,8 @@ services:
     restart: unless-stopped
 ```
 4 - Save and run the container using the command below:
-```docker compose up -d
 ```
+docker compose up -d
+```
+5 - Using your browser, configure the proxy to use the Coker Host IP Address and the Port defined above (i.e. 8888)
 
