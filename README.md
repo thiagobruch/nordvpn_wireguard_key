@@ -67,5 +67,5 @@ services:
 ```
 docker compose up -d
 ```
-<B>2.5 - </B>Using your browser, configure the proxy to use the Coker Host IP Address and the Port defined above (i.e. 8888)
+<B>2.5 - </B>Using your browser, configure the proxy to use the Docker Host IP Address and the Port defined above (i.e. 8888)
 
